@@ -252,5 +252,14 @@ function traducirVentana() {
     if (translations[lang][key]) el.placeholder = translations[lang][key];
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("galleryVideo");
+  if (video) {
+    video.play().catch(() => {
+      console.log("Autoplay bloqueado — el usuario deberá presionar play.");
+    });
+  }
+});
+
 
 
