@@ -29,18 +29,21 @@ function volverPortafolio() {
 
 // --- Galería ---
 let videoIndex = 1;
+const totalVideos = 29;
+
 function nextVideo() {
   videoIndex++;
-  if (videoIndex > 27) videoIndex = 1;
+  if (videoIndex > totalVideos) videoIndex = 1;
   const video = document.getElementById("galleryVideo");
   video.src = `DJ${videoIndex}.mp4`;
   video.play();
 }
+
 function prevVideo() {
   videoIndex--;
-  if (videoIndex < 1) videoIndex = 27;
+  if (videoIndex < 1) videoIndex = totalVideos;
   const video = document.getElementById("galleryVideo");
-  video.src = `img/DJ${videoIndex}.mp4`;
+  video.src = `DJ${videoIndex}.mp4`;
   video.play();
 }
 
@@ -249,4 +252,5 @@ function traducirVentana() {
     if (translations[lang][key]) el.placeholder = translations[lang][key];
   });
 }
+
 
