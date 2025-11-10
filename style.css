@@ -419,6 +419,28 @@ button:hover {
   background: #39ff14;
   color: #000;
 }
+@media (max-width: 600px) {
+  body {
+    font-size: 14px; /* reduce tamaño general */
+    line-height: 1.6; /* mejora la legibilidad */
+    padding: 10px; /* agrega margen interno para no pegar al borde */
+  }
+
+  section#experiencia {
+    padding: 15px;
+    text-align: justify; /* hace que los párrafos queden ordenados */
+  }
+
+  section#experiencia h2 {
+    font-size: 20px; /* título más proporcionado */
+    text-align: center;
+  }
+
+  section#experiencia p {
+    font-size: 14px;
+  }
+}
+
 
 
 
