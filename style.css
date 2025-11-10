@@ -356,5 +356,27 @@ button:hover {
     font-size: 1rem;
   }
 }
+/* --- Corrección para que los videos carguen bien en móvil --- */
+.galeria video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Asegura que el primer video siempre sea visible */
+.galeria video:first-of-type {
+  opacity: 1 !important;
+  display: block !important;
+}
+.video-slide {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.video-slide.active {
+  opacity: 1;
+}
+
 
 
