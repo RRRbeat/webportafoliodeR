@@ -7,10 +7,13 @@
 body {
   font-family: "Poppins", sans-serif;
   background: #000000;
-  color: #ff0000;
-  overflow: hidden;
-  height: 100vh;
+  color: #d0ff00;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh; /* permite scroll si el texto es largo */
 }
+
 
 /* Fondo animado */
 .bg-waves {
@@ -377,6 +380,7 @@ button:hover {
 .video-slide.active {
   opacity: 1;
 }
+
 
 
 
