@@ -380,6 +380,46 @@ button:hover {
   opacity: 1;
 }
 
+.gallery-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+}
+
+.gallery-content video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #39ff14;
+  background: #000;
+  object-fit: cover;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.controls button {
+  background: none;
+  border: 2px solid #39ff14;
+  color: #39ff14;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: #39ff14;
+  color: #000;
+}
+
 
 
 
