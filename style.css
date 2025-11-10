@@ -440,16 +440,12 @@ button:hover {
     font-size: 14px;
   }
 }
-/* ==== AJUSTES RESPONSIVOS PARA CELULARES ==== */
+/* ==== AJUSTES RESPONSIVOS SOLO PARA EXPERIENCIA ==== */
 @media (max-width: 600px) {
-  body {
-    font-family: "Poppins", sans-serif; /* mantiene tu fuente original */
+  section#experiencia {
+    font-family: "Poppins", sans-serif; /* mantiene fuente */
     font-size: 14px;
     line-height: 1.6;
-    padding: 10px;
-  }
-
-  section#experiencia {
     padding: 15px;
     text-align: justify;
     box-sizing: border-box;
@@ -479,3 +475,4 @@ button:hover {
     word-wrap: break-word;
   }
 }
+
