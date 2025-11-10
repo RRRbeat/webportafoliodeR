@@ -33,7 +33,7 @@ function nextVideo() {
   videoIndex++;
   if (videoIndex > 27) videoIndex = 1;
   const video = document.getElementById("galleryVideo");
-  video.src = `img/DJ${videoIndex}.mp4`;
+  video.src = `DJ${videoIndex}.mp4`;
   video.play();
 }
 function prevVideo() {
@@ -249,3 +249,4 @@ function traducirVentana() {
     if (translations[lang][key]) el.placeholder = translations[lang][key];
   });
 }
+
