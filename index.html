@@ -72,22 +72,38 @@
     </div>
   </section>
 
-  <!-- Contacto -->
-  <section id="contacto" class="screen" data-translatable="true">
-    <div class="top-buttons">
-      <button class="back-btn" data-key="back" onclick="volverMenu()">Volver al menú</button>
+<!-- Contacto -->
+<section id="contacto" class="screen" data-translatable="true">
+  <div class="top-buttons">
+    <button class="back-btn" data-key="back" onclick="volverMenu()">Volver al menú</button>
+  </div>
+
+  <div class="content">
+    <h2 data-key="contact">Contacto</h2>
+
+    <form action="https://formspree.io/f/xdkyndyk" method="POST">
+      <input type="text" name="name" data-placeholder="namePlaceholder" placeholder="Tu nombre" required />
+      <input type="email" name="email" data-placeholder="emailPlaceholder" placeholder="Tu correo" required />
+      <textarea name="message" data-placeholder="messagePlaceholder" placeholder="Tu mensaje" required></textarea>
+      <button type="submit" data-key="send">Enviar</button>
+    </form>
+
+    <p>📸 <a href="https://www.instagram.com/rdelucio" target="_blank">@rdelucio</a></p>
+
+    <!-- 🔽 Código QR solo visible en esta sección -->
+    <div class="qr-container">
+      <p>📲 Escaneá el código para visitar mi sitio:</p>
+      <iframe
+        src="https://api.qrserver.com/v1/create-qr-code/?data=https://rrrbeat.github.io/DJR/&size=200x200"
+        width="200"
+        height="200"
+        frameborder="0"
+        style="border:none;">
+      </iframe>
     </div>
-    <div class="content">
-      <h2 data-key="contact">Contacto</h2>
-      <form action="https://formspree.io/f/xdkyndyk" method="POST">
-        <input type="text" name="name" data-placeholder="namePlaceholder" placeholder="Tu nombre" required />
-        <input type="email" name="email" data-placeholder="emailPlaceholder" placeholder="Tu correo" required />
-        <textarea name="message" data-placeholder="messagePlaceholder" placeholder="Tu mensaje" required></textarea>
-        <button type="submit" data-key="send">Enviar</button>
-      </form>
-      <p>📸 <a href="https://www.instagram.com/rdelucio" target="_blank">@rdelucio</a></p>
-    </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Traductor -->
   <div class="language-selector">
@@ -102,4 +118,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
