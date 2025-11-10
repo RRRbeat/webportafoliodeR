@@ -443,50 +443,39 @@ button:hover {
 /* ==== AJUSTES RESPONSIVOS PARA CELULARES ==== */
 @media (max-width: 600px) {
   body {
+    font-family: "Poppins", sans-serif; /* mantiene tu fuente original */
     font-size: 14px;
     line-height: 1.6;
     padding: 10px;
   }
 
-  /* Contenedor principal de la sección */
   section#experiencia {
     padding: 15px;
     text-align: justify;
     box-sizing: border-box;
   }
 
-  /* Botón volver */
   section#experiencia .back-btn {
     font-size: 14px;
     padding: 6px 12px;
     border-radius: 8px;
   }
 
-  /* Contenido del texto */
   section#experiencia .content {
     max-width: 100%;
     margin: 0 auto;
   }
 
-  /* Título */
   section#experiencia h2 {
     font-size: 22px;
     text-align: center;
     margin-bottom: 15px;
   }
 
-  /* Texto dentro de experienceTextContainer */
   #experienceTextContainer {
     font-size: 14px;
     line-height: 1.6;
     padding: 0 5px;
-    word-wrap: break-word; /* evita que el texto se corte */
+    word-wrap: break-word;
   }
 }
-
-
-
-
-
-
-
