@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #000000;
+  color: #ff0000;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Fondo animado */
+.bg-waves {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.bg-waves .layer {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: screen;
+  opacity: 0.45;
+  animation: float 14s infinite ease-in-out;
+}
+.bg-waves .layer.a {
+  background: linear-gradient(120deg, rgba(252, 252, 245, 0.15), rgba(238, 255, 0, 0.1));
+}
+.bg-waves .layer.b {
+  background: linear-gradient(200deg, rgba(0, 230, 255, 0.12), rgba(120, 0, 255, 0.1));
+}
+.bg-waves .layer.c {
+  background: linear-gradient(60deg, rgba(255, 255, 255, 0.1), rgba(255, 208, 0, 0.08));
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4%); }
+}
+
+/* Pantallas */
+.screen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+}
+.screen.active {
+  display: flex;
+}
+
+/* Inicio */
+.neon {
+  font-size: 90px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: #0119f1;
+  text-shadow: 0 0 6px #f80808, 0 0 20px #2f00ff, 0 0 40px #2f09d8;
+  animation: flicker 4s infinite;
+  cursor: pointer;
+}
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.2; }
+}
+
+/* Menú principal */
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  animation: fadeInMenu 2s ease-in-out forwards;
+}
+@keyframes fadeInMenu {
+  0% {
+    opacity: 0;
+    letter-spacing: 30px;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 5px;
+  }
+}
+.menu-list a {
+  color: #06ffde;
+  font-size: 28px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.menu-list a:hover {
+  color: #002fff;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+.mini-logo {
+  margin-top: 40px;
+  font-size: 20px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.mini-logo:hover {
+  text-shadow: 0 0 10px #2a007e;
+}
+
+/* Contenido subventanas */
+.content {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+.content h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.content p, .content a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+.content a:hover {
+  color: #0004ff;
+}
+
+/* Botones */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: rgba(255, 0, 200, 0.3);
+}
+
+/* --- Galería --- */
+.gallery-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 100px;
+  gap: 20px;
+  height: 100vh;
+  text-align: center;
+}
+.gallery-content video {
+  width: 90%;
+  max-width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 0, 128, 0.4);
+}
+
+/* Controles video */
+.controls {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+.controls button {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.controls button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Top Buttons */
+.top-buttons {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+.back-btn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.back-btn:hover {
+  background: rgba(255, 0, 0, 0.1);
+}
+
+/* Traductor */
+.language-selector {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  z-index: 9999;
+}
+.language-icon {
+  font-size: 1.8em;
+  cursor: pointer;
+}
+.language-options {
+  display: none;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 10px;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  padding: 10px;
+}
+.language-options.active {
+  display: flex;
+}
+.language-options div {
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.language-options div:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .neon { font-size: 60px; }
+  .menu-list a { font-size: 22px; }
+  .content h2 { font-size: 28px; }
+  .gallery-content video { width: 95%; }
+}
+/* --- PORTAFOLIO --- */
+.portfolio-content {
+  margin-top: 80px;
+  padding: 0 40px;
+  text-align: center;
+  line-height: 1.8;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Texto principal del portafolio */
+.portfolio-text {
+  text-align: justify;
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #f2f2f2;
+  white-space: pre-line;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Enlace Spotify en verde neón */
+.neon-link {
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.neon-link:hover {
+  color: #d0ff00;
+  text-shadow: 0 0 10px #d0ff00, 0 0 20px #d0ff00, 0 0 30px #d0ff00;
+}
+
+/* Bloque Spotify */
+.spotify-link {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* Texto de experiencia */
+.experiencia-texto {
+  max-width: 800px;
+  margin: 300px auto 50px; /* ↑ agrega espacio arriba y abajo */
+  line-height: 1.8;       /* ↑ mejora el espaciado entre líneas */
+  text-align: left;
+  font-size: 1.05rem;     /* ↑ un poco más legible */
+  padding: 0 20px 80px;   /* ↑ agrega margen interno lateral y al fondo */
+  box-sizing: border-box; /* asegura que el padding no rompa el ancho */
+}
+
+
+/* Botón “Ver experiencia” */
+.exp-btn {
+  margin-top: 20px;
+  background: none;
+  border: 2px solid #d0ff00;
+  color: #d0ff00;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.exp-btn:hover {
+  background: #d0ff00;
+  color: #000;
+}
+
+/* Enlace Spotify verde neón */
+.neon-link {
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+  font-weight: bold;
+}

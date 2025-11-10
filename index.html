@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>R de Lucio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Fondo animado -->
+  <div class="bg-waves">
+    <div class="layer a"></div>
+    <div class="layer b"></div>
+    <div class="layer c"></div>
+  </div>
+
+  <!-- Pantalla de inicio -->
+  <section id="inicio" class="screen active" onclick="entrarMenu()">
+    <h1 class="neon">R de Lucio</h1>
+  </section>
+
+  <!-- Menú principal -->
+  <section id="menu" class="screen" data-translatable="true">
+    <ul class="menu-list">
+      <li><a href="#" data-key="portfolio" onclick="abrirVentana('portafolio')">Portafolio</a></li>
+      <li><a href="#" data-key="gallery" onclick="abrirVentana('galeria')">Galería</a></li>
+      <li><a href="#" data-key="contact" onclick="abrirVentana('contacto')">Contacto</a></li>
+    </ul>
+    <div class="mini-logo" onclick="volverInicio()">R de Lucio</div>
+  </section>
+
+ <!-- Portafolio (resumen + spotify fijo) -->
+<section id="portafolio" class="screen" data-translatable="true">
+  <div class="top-buttons">
+    <button class="back-btn" data-key="back" onclick="volverMenu()">Volver al menú</button>
+  </div>
+
+  <div class="content portfolio-content">
+    <h2 data-key="portfolio">Portafolio</h2>
+
+    <!-- Texto del portafolio con Spotify -->
+    <div id="portfolioTextContainer" data-key="portfolioText" class="portfolio-text"></div>
+
+    <!-- Botón traducible -->
+    <button class="exp-btn" data-key="expButton" onclick="abrirVentana('experiencia')">👉 Ver experiencia</button>
+  </div>
+</section>
+
+
+  <!-- Experiencia (subventana con texto completo, traducible) -->
+  <section id="experiencia" class="screen" data-translatable="true">
+    <div class="top-buttons">
+      <button class="back-btn" onclick="volverPortafolio()">← Volver</button>
+    </div>
+    <div class="content experiencia-texto">
+      <h2 data-key="experienceTitle">Experiencia</h2>
+      <div data-key="experienceText" id="experienceTextContainer"></div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section id="galeria" class="screen" data-translatable="true">
+    <div class="top-buttons">
+      <button class="back-btn" data-key="back" onclick="volverMenu()">Volver al menú</button>
+    </div>
+    <div class="gallery-content">
+      <video id="galleryVideo" src="img/DJ1.mp4" autoplay muted controls></video>
+      <div class="controls">
+        <button onclick="prevVideo()">⟨</button>
+        <button onclick="nextVideo()">⟩</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="screen" data-translatable="true">
+    <div class="top-buttons">
+      <button class="back-btn" data-key="back" onclick="volverMenu()">Volver al menú</button>
+    </div>
+    <div class="content">
+      <h2 data-key="contact">Contacto</h2>
+      <form action="https://formspree.io/f/xdkyndyk" method="POST">
+        <input type="text" name="name" data-placeholder="namePlaceholder" placeholder="Tu nombre" required />
+        <input type="email" name="email" data-placeholder="emailPlaceholder" placeholder="Tu correo" required />
+        <textarea name="message" data-placeholder="messagePlaceholder" placeholder="Tu mensaje" required></textarea>
+        <button type="submit" data-key="send">Enviar</button>
+      </form>
+      <p>📸 <a href="https://www.instagram.com/rdelucio" target="_blank">@rdelucio</a></p>
+    </div>
+  </section>
+
+  <!-- Traductor -->
+  <div class="language-selector">
+    <div class="language-icon" onclick="toggleLanguageMenu()">🌐</div>
+    <div class="language-options" id="languageMenu">
+      <div onclick="setLanguage('es')">Español</div>
+      <div onclick="setLanguage('en')">English</div>
+      <div onclick="setLanguage('pt')">Português</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
