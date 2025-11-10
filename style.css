@@ -325,3 +325,37 @@ button:hover {
   text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
   font-weight: bold;
 }
+
+
+/* --- Ajustes para móviles --- */
+@media (max-width: 768px) {
+  .experiencia-texto {
+    max-width: 90%;
+    margin: 80px auto 60px auto;
+    padding: 20px;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  .portfolio-text,
+  #portfolioTextContainer {
+    max-width: 90%;
+    text-align: center;
+    margin: 60px auto;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .exp-btn {
+    display: block;
+    margin: 40px auto;
+    font-size: 1rem;
+  }
+}
+
+
