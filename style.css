@@ -301,6 +301,35 @@ button:hover {
   padding: 0 20px 80px;   /* ↑ agrega margen interno lateral y al fondo */
   box-sizing: border-box; /* asegura que el padding no rompa el ancho */
 }
+/* 🔹 Estilos del texto en Experiencia */
+.experiencia-texto {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: left;
+  font-size: 1rem;
+  padding: calc(env(safe-area-inset-top) + 100px) 20px 60px;
+  /* ↑ Usa el "safe-area" del notch + padding extra */
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 🔹 Ajuste visual en pantallas chicas */
+@media (max-width: 768px) {
+  .experiencia-texto {
+    padding-top: calc(env(safe-area-inset-top) + 140px);
+    font-size: 1.1rem;
+  }
+}
+
+/* 🔹 iPhones con notch o Androids con barra */
+@supports (padding: max(0px)) {
+  .experiencia-texto {
+    padding-top: max(env(safe-area-inset-top), 120px);
+  }
+}
+
 
 
 /* Botón “Ver experiencia” */
@@ -500,6 +529,7 @@ button:hover {
   background: #fff;
   padding: 8px;
 }
+
 
 
 
