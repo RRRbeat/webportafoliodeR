@@ -261,5 +261,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+const videos = [
+  "img/DJ1.mp4",
+  "img/DJ2.mp4",
+  "img/DJ3.mp4",
+  // ...
+  "img/DJ30.mp4",
+  "img/DJ31.mp4"
+];
+
 
 
